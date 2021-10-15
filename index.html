@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="first">
+
+            <div class="heading">
+                <span class="tasks_head">Tasks</span>
+                <span class="lists_head">List</span>
+            </div>
+
+            <div class="add">
+                <span onclick="toggle_list_fn()" class="add_list_button"><i class="fas fa-plus-circle"></i></span>
+                <span class="lis">Add List</span>  
+            </div>
+
+
+            <div class="list_container" id="vala"></div>
+            <div id="null_items">No Items in the todo list</div>
+            
+
+        </div>
+
+    </div>
+
+
+
+    <div class="pop_up popup_box" id="popup_list">
+
+        <div class="list_box">
+
+            <div class="new_list" id ="lbl">Add New List</div>
+
+            <input type="text" id="inputField_lists" name="name" placeholder="Add New List"class="text">
+
+            <div class="add_close">
+
+                <button onclick="add_list_fn()" class="add_btn" id="add_btn">ADD</button>
+                <button onclick="toggle_list_fn()" class="add_btn" id="close_btn">CLOSE</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="pop_up popup_box" id="popup_item">
+
+        <div class="list_box">
+
+            <div class="new_item" id ="lbl">Add New Item</div>
+
+            <input type="text" id="inputField_item" name="name" placeholder="Add New Item" value="">
+
+            <div class="add_close">
+                <button onclick="add_item_fn(this)" class="add_btn">ADD</button>
+                <button onclick="toggle_item_fn(false)" class="add_btn">CLOSE</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
